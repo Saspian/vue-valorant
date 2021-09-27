@@ -1,6 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-import AgentDetail from '../views/AgentDetail.vue'
+import Agents from '../views/Agents.vue';
+import AgentDetails from '../views/AgentDetails.vue';
+import Weapons from '../views/Weapons.vue';
+import NotFound from '../views/NotFound.vue';
 
 const routes = [
   {
@@ -9,9 +12,24 @@ const routes = [
     component: Home
   },
   {
+    path: '/agents',
+    name: 'Agents',
+    component: Agents
+  },
+  {
     path: '/agents/:id',
-    name: 'Agent',
-    component: AgentDetail
+    name: 'AgentDetails',
+    component: AgentDetails
+  },
+  {
+    path: '/weapons',
+    name: 'Weapons',
+    component: Weapons
+  },
+  {
+    path: '/:catchAll(.*)',
+    name: 'NotFound',
+    component: NotFound,
   }
 ]
 
@@ -20,4 +38,4 @@ const router = createRouter({
   routes
 })
 
-export default router
+export default router;

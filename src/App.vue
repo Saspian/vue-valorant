@@ -1,5 +1,4 @@
 <template>
-  <AgentList />
   <router-view />
 </template>
 <style>
