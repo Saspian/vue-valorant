@@ -26,10 +26,12 @@
   </figure>
 </template>
 <script>
+import { useRouter } from "vue-router";
 export default {
   name: "List",
   props: ["uuid", "displayIcon", "displayName", "description", "role"],
   setup() {
+    const router = useRouter();
     const getAgentDetail = id => {
       router.push({
         name: "AgentDetails",
